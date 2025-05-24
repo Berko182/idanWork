@@ -1,14 +1,8 @@
-<?php include '../../header.php'; ?>
-<?php
+<?php 
+include '../../header.php';
+include '../../includes/commonFunctions.php'; 
 
-$servername = "localhost";
-$username = "itayrm_ItayRam";
-$password = "itay0547862155";
-$dbname = "itayrm_dogs_boarding_house";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
-
+$conn=DBconnect();
 $current_user = $_SESSION['username'];
 $user_data = [];
 
